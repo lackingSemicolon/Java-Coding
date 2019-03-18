@@ -1,0 +1,8 @@
+Put the RXTXcomm jar into 
+C:\Program Files (x86)\Java\jre1.8.0_181\lib\ext
+
+the put the .dll inside the lib folder into
+C:\Windows\System32
+
+the open cmd and navigate to the ArduinoReader.jar and run this code
+java -jar ArduinoReader.jar

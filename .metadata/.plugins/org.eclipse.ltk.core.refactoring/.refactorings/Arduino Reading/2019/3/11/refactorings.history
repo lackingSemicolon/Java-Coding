@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;SerialTest.setKeys(...)&apos; to &apos;setMovement&apos;&#x0D;&#x0A;- Original project: &apos;Arduino Reading&apos;&#x0D;&#x0A;- Original element: &apos;SerialTest.setKeys(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;SerialTest.setMovement(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;setKeys&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;{SerialTest.java[SerialTest~setKeys~I~I~I~I" name="setMovement" references="true" stamp="1552434228369" version="1.0"/>
+</session>
