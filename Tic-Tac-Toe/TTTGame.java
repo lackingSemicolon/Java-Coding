@@ -11,11 +11,14 @@ public class TTTGame extends GridGame {
 	}
 	
 	public Boolean placeMark(int row, int col, int player) {
-		return false;
+		if (isTaken[row][col] != 0)
+			return false;
+		isTaken[row][col] = player;
+		return true;
 	}
 	
 	public void placeMark(int player) {
-		
+		// IDK what to use this for....
 	}
 	
 	public void printGrid() {
@@ -44,9 +47,10 @@ public class TTTGame extends GridGame {
 				else{
 					if(j%2==0)
 						System.out.print("|");
-					else 
+					else {
 						//System.out.print(" "+j+' '+i+" ");
 						System.out.print(" "+getArrayIndx(j)+' '+getArrayIndx(i)+" ");
+					}
 				}
 			}
 			if(i%2!=0)
