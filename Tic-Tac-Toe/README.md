@@ -10,6 +10,8 @@ Java compiler
 ## How to run
 execute the follow command in your linux terminal:
 > make run
+
 If you're on windows, you can open command prompt and go to the project's location and type:
+
 > javac *.java
 > java Main
