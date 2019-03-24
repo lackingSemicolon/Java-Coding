@@ -1,0 +1,7 @@
+all:
+	javac *.java
+run:
+	make all
+	java Main
+clean:
+	rm *.class
