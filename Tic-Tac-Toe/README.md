@@ -14,4 +14,5 @@ execute the follow command in your linux terminal:
 If you're on windows, you can open command prompt and go to the project's location and type:
 
 > javac *.java
+
 > java Main
