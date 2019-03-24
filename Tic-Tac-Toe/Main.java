@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 
@@ -55,6 +56,11 @@ public class Main {
 				row = Character.getNumericValue(input.charAt(0)); // get the new updated cell location
 				col = Character.getNumericValue(input.charAt(1));
 			}
+			try { // add a delay too see ai's pick
+				game.printGrid();
+				if (game.getStatus() != 0) break;
+				TimeUnit.MILLISECONDS.sleep(300);
+			} catch (InterruptedException e) {}
 			aiPlayer.tttPick();
 		}
 		game.printGrid();
@@ -80,6 +86,11 @@ public class Main {
 					System.out.print("ERR: Invalid Input, Enter Col (in range) (eg. 1): ");
 				}
 			}
+			try { // add a delay too see ai's pick
+				game.printGrid();
+				if (game.getStatus() != 0) break;
+				TimeUnit.MILLISECONDS.sleep(300);
+			} catch (InterruptedException e) {}
 			aiPlayer.c4Pick();
 		}
 		game.printGrid();

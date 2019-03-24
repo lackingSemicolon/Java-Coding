@@ -26,5 +26,6 @@ hs_err_pid*
 /.recommenders/
 .metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
 *.dat
-.metadata\.plugins\org.eclipse.jdt.core\*
+.metadata/.plugins/org.eclipse.jdt.core\*
 .metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+metadata/.plugins/org.eclipse.core.resources/*
