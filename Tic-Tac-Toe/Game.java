@@ -5,6 +5,8 @@ public class Game extends GridGame {
 	int nextPlayer = 0, winner = 0;
 	boolean isGameOver = false;
 	
+	public int lastPlay[] = {-1,-1};
+	
 	public Game(int gridSize, int gameType) {
 		this.gameType = gameType;
 		if (gameType == 1) // if TTT
@@ -12,8 +14,17 @@ public class Game extends GridGame {
 		else
 			this.grid = new Grid(gridSize);
 	}
+	
+	public boolean isSpaceLeft() {
+		return grid.getSpaceLeft() > 0;
+	}
+	
 	public int getGridSize() {
 		return grid.gridSize;
+	}
+	
+	public int [][] getGrid() {
+		return grid.getGrid();
 	}
 	public int getStatus() { // return who is the winner
 		if (!isGameOver)
@@ -26,6 +37,7 @@ public class Game extends GridGame {
 	public Boolean placeMark(int row, int col, int player) { // For TTT
 		if (!isGameOver && !grid.isSet(row, col)) { // if the game is not ever yet or spot is not taken
 			grid.setCell(row, col, player);
+			lastPlay[0] = row; lastPlay[1] = col;
 			isGameOver = didPlayerWin(row, col, player); //update win status
 			if (isGameOver) 
 				winner = player;
@@ -49,6 +61,7 @@ public class Game extends GridGame {
 				break;
 			}
 		}
+		printGrid();
 		return !isColFull; // return true if we manage to place a mark
 	}
 	
@@ -113,7 +126,7 @@ public class Game extends GridGame {
 		grid.clear();
 		isGameOver = false;
 		winner = 0;
-		//printGrid();
+		printGrid();
 	}
 	
 	int getArrayIndx(int val) { // return value according to array indexes.
@@ -148,6 +161,7 @@ public class Game extends GridGame {
 			ret = (grid.getCell(row, i) == player)? true:false;
 			if (ret == false) break;
 		}
+		if (ret == false) System.out.println("Won by Vert");
 		return ret;
 	}
 	boolean checkHorizontal(int row, int col, int player) { // check win by hor
@@ -156,6 +170,7 @@ public class Game extends GridGame {
 			ret = (grid.getCell(i, col) == player)? true:false;
 			if (ret == false) break;
 		}
+		if (ret == false) System.out.println("Won by Hor");
 		return ret;
 	}
 	boolean checkDiagonal(int row, int col, int player) { // check win by diag
@@ -191,6 +206,7 @@ public class Game extends GridGame {
 				}
 			}
 		}
+		if (ret == false) System.out.println("Won by diagonal");
 		return ret;
 	}
 }

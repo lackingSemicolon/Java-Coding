@@ -17,6 +17,10 @@ public class Grid {
 		return spaceLeft;
 	}
 	
+	public int [][] getGrid(){
+		return isTaken;
+	}
+	
 	public int getCell(int row, int col) { // return the value of what players took this spot
 		//System.out.println(row + " " + col);
 		return isTaken[row][col];

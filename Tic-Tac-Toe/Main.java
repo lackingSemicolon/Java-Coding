@@ -39,7 +39,7 @@ public class Main {
 		AI aiPlayer = new AI(game, 2);
 		Scanner keyboard = new Scanner(System.in);
 		while(game.getStatus() == 0 ) { // while there is not a tie or no one won yet
-			game.printGrid();
+			//game.printGrid();
 			System.out.print("Place mark (You're playing as X) at (Row Col): ");
 			String input = "";
 			while ((input = isValidTTTInput(keyboard, game.getGridSize())).equals("")) { // keep asking for a input till it's valid
@@ -63,7 +63,7 @@ public class Main {
 			} catch (InterruptedException e) {}
 			aiPlayer.tttPick();
 		}
-		game.printGrid();
+		//game.printGrid();
 		if (game.getStatus() == 3)
 			System.out.print("Game OVER\nITS A TIE!");
 		else
@@ -74,7 +74,7 @@ public class Main {
 		AI aiPlayer = new AI(game, 2);
 		Scanner keyboard = new Scanner(System.in);
 		while(game.getStatus() == 0) {
-			game.printGrid();
+			//game.printGrid();
 			System.out.print("Place mark at (Col): ");
 			int input = -1;
 			while ((input = isValidC4Input(keyboard, game.getGridSize())) == -1) {
@@ -93,7 +93,7 @@ public class Main {
 			} catch (InterruptedException e) {}
 			aiPlayer.c4Pick();
 		}
-		game.printGrid();
+		//game.printGrid();
 		if (game.getStatus() == 3)
 			System.out.print("Game OVER\nITS A TIE!");
 		else
