@@ -1,7 +1,7 @@
 # Tic-Tac-Toe/Connect 4
 
 ## Description:
-This is a WSU CS 355 OOP assignment where we as tasked with writing a Tic-Tac-Toe game and another game that involve a bigger gride. For the second game,
+This is a WSU CS 355 OOP assignment where we as tasked with writing a Tic-Tac-Toe game and another game that involve a bigger grid. For the second game,
 I choose to make connect 4 as my second game.
 
 ## Requirement
